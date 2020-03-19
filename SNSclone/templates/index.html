@@ -1,4 +1,4 @@
-<h1>Index</h1>
-{% if User.is_authenticated %}
-{{ User.username }}
-{% endif %}
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Welcome to Star Social!</h1>
+{% endblock %}
