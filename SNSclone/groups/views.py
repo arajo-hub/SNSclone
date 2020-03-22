@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views import generic
 from groups.models import Group, GroupMember
 from . import models
@@ -9,6 +9,11 @@ from . import models
 class CreateGroup(LoginRequiredMixin, generic.CreateView):
     fields=('name', 'description')
     model=Group
+
+class DeleteGroup(LoginRequiredMixin, generic.DeleteView):
+    fields='__all__'
+    model=Group
+    success_url=reverse_lazy('groups:all')
 
 class SingleGroup(generic.DetailView):
     model=Group

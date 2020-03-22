@@ -6,7 +6,7 @@ from django.urls import reverse
 User=get_user_model()
 
 from django import template
-register=template.Library()
+register=template.Library() # register는 유효한 태그 라이브러리를 만들기 위한 모듈레벨의 인스턴스 객체
 
 class Group(models.Model):
     name=models.CharField(max_length=255, unique=True)
@@ -19,12 +19,12 @@ class Group(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        self.slug=slugify(self.name)
+        self.slug=slugify(self.name) # Group name을 slug화해준다. 예를 들어, b b b라면 b-b-b
         self.description_html=self.description
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('groups:single', kwargs={'slug':self.slug})
+        return reverse('groups:single', kwargs={'slug':self.slug}) # name이 single인 path의 url에는 slug가 들어가는데, 이 때 slug화된 그룹명이 url에 포함된다.
 
     class Meta:
         ordering=['name']

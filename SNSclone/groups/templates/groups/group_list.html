@@ -1,6 +1,7 @@
 {% extends 'groups/group_base.html' %}
 {% block pregroup %}
 <div class="col-md-4">
+  {# group list 페이지 중 상세내용영역 #}
   <div class="content">
     {% if user.is_authenticated %}
     <h2>Welcome Back! <a href="{% url 'posts:for_user' username=user.username%}">@{{ user.username }}</a></h2>
@@ -15,24 +16,25 @@
 {% endblock %}
 
 {% block group_content %}
+{# group list 영역 #}
 <div class="col-md-8">
   <div class="list-group">
     {% for group in object_list %}
     <a class='list-group-item' href="{% url 'groups:single' slug=group.slug %}">
-    <h3 class='title list-group-item-heading'>{{ group.name }}</h3>
-    <div class="list-group-item-text container-fluid">
-      {{ group.description_html|safe }}
-      <div class="row">
-        <div class="col-md-4">
-          <span class='badge'>{{ group.members.count }}</span>
-          member{{ group.members.count|pluralize }}
-        </div>
-        <div class="col-md-4">
-          <span class='badge'>{{ group.posts.count }}</span>
-          post{{ group.posts.count|pluralize }}
+      <h3 class='title list-group-item-heading'>{{ group.name }}</h3>
+      <div class="list-group-item-text container-fluid">
+        {{ group.description_html|safe }}
+        <div class="row">
+          <div class="col-md-4">
+            <span class='badge'>{{ group.members.count }}</span>
+            member{{ group.members.count|pluralize }}
+          </div>
+          <div class="col-md-4">
+            <span class='badge'>{{ group.posts.count }}</span>
+            post{{ group.posts.count|pluralize }}
+          </div>
         </div>
       </div>
-    </div>
     </a>
     {% endfor %}
   </div>

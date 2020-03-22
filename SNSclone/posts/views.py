@@ -8,6 +8,7 @@ from braces.views import SelectRelatedMixin
 from . import models
 from . import forms
 from django.contrib.auth import get_user_model
+
 User=get_user_model()
 
 class PostList(SelectRelatedMixin, generic.ListView):
@@ -19,7 +20,7 @@ class UserPosts(generic.ListView):
     template_name='posts/user_post_list.html'
 
     def get_queryset(self):
-        try:
+        try: # Post 중 작성한 user가 같은 Post를 모은다.
             self.post_user=User.objects.prefetch_related('posts').get(username__iexact=self.kwargs.get('username'))
         except User.DoesNotExist:
             raise Http404
@@ -28,12 +29,12 @@ class UserPosts(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context=super().get_context_data(**kwargs)
-        context['post_user']=self.post_user
+        context['post_user']=self.post_user # 위에서 모은 Post를 작성한 User를 함께 묶어 ListView로 보낸다.(Post와 함께 Post를 작성한 User도 나타내기 위해.)
         return context
 
 class PostDetail(SelectRelatedMixin, generic.DetailView):
     model=models.Post
-    select_related=('user', 'group')
+    select_related=('user', 'group') # Post만 가져오지 않고, 그 Post와 연결된 user와 group도 함께 가져온다.
 
     def get_queryset(self):
         queryset=super().get_queryset()
