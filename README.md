@@ -12,16 +12,16 @@
   * 로그인 시 그룹에 Join 혹은 Leave 결정 가능
 
 * 홈페이지 전체 자바스크립트 효과 적용
-#스크린샷
-###홈화면
-![](https://github.com/arajo-hub/SNSclone/tree/master/image/home)
-###Post 작성
-![](https://github.com/arajo-hub/SNSclone/tree/master/image/createpost)
-###Group 생성
-![](https://github.com/arajo-hub/SNSclone/tree/master/image/creategroup)
-###Group list
-![](https://github.com/arajo-hub/SNSclone/tree/master/image/grouplist)
-###Group 상세화면
-![](https://github.com/arajo-hub/SNSclone/tree/master/image/groupdetail)
-###User Post list
-![](https://github.com/arajo-hub/SNSclone/tree/master/image/userpostlist)
+# 스크린샷
+### 홈화면
+![](https://github.com/arajo-hub/SNSclone/blob/master/screenshot/home.png)
+### Post 작성
+![](https://github.com/arajo-hub/SNSclone/blob/master/screenshot/createpost.png)
+### Group 생성
+![](https://github.com/arajo-hub/SNSclone/blob/master/screenshot/creategroup.png)
+### Group list
+![](https://github.com/arajo-hub/SNSclone/blob/master/screenshot/grouplist.png)
+### Group 상세화면
+![](https://github.com/arajo-hub/SNSclone/blob/master/screenshot/groupdetail.png)
+### User Post list
+![](https://github.com/arajo-hub/SNSclone/blob/master/screenshot/userpostlist.png)
