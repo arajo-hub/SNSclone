@@ -10,28 +10,34 @@
 
     {# css #}
     <link rel="stylesheet" href="{% static 'SNSclone/css/master.css' %}">
+
+    {# font #}
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Marko+One&family=Nova+Flat&display=swap" rel="stylesheet">
   </head>
 
   <body>
     {# navigation bar 영역 #}
-    <nav class='navbar mynav'>
-      <div class="container">
-        <a class='navbar-brand mynav' href="{% url 'home' %}">Star Social</a>
-        <ul class='nav navbar-nav navbar-right'>
-          {% if user.is_authenticated %}
-            <li>Welcome, {{user.username}}</li>
-            <li><a href="{% url 'posts:create' %}">Post</a></li>
-            <li><a href="{% url 'groups:all' %}">Groups</a></li>
-            <li><a href="{% url 'groups:create' %}">Create Group</a></li>
-            <li><a href="{% url 'accounts:logout' %}">Log Out</a></li>
-          {% else %}
-            <li><a href="{% url 'groups:all' %}">Groups</a></li>
-            <li><a href="{% url 'accounts:login' %}">Login</a></li>
-            <li><a href="{% url 'accounts:signup' %}">Sign Up</a></li>
-          {% endif %}
-        </ul>
-      </div>
-    </nav>
+    <div class="container">
+      <nav class='navbar navbar-expand navbar-light'>
+        <div class="container">
+        <a class='nav-brand' href="{% url 'home' %}">Star Social</a>
+          <ul class='nav navbar-nav'>
+            {% if user.is_authenticated %}
+              <li class='navar-item'><a class="nav-link">Welcome, {{user.username}}</a></li>
+              <li class='navar-item'><a class="nav-link">ℓ</a></li>
+              <li class='navar-link'><a class="nav-link navitem" href="{% url 'posts:create' %}">New Post</a></li>
+              <li class='navar-link'><a class="nav-link navitem" href="{% url 'groups:create' %}">New Group</a></li>
+              <li class='navar-link'><a class="nav-link navitem" href="{% url 'groups:all' %}">Groups</a></li>
+              <li class='navar-link'><a class="nav-link navitem" href="{% url 'accounts:logout' %}">Log Out</a></li>
+            {% else %}
+              <li class='navar-link'><a class="nav-link navitem" href="{% url 'groups:all' %}">Groups</a></li>
+              <li class='navar-link'><a class="nav-link navitem" href="{% url 'accounts:login' %}">Login</a></li>
+              <li class='navar-link'><a class="nav-link navitem" href="{% url 'accounts:signup' %}">Sign Up</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </div>
 
     {# content 영역 #}
     <div class="container mycontent">

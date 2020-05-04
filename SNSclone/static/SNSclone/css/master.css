@@ -1,8 +1,73 @@
 html, body {
+  font-family: 'Marko One', serif;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: #2f294f;
-  color:white;
+  background: #714674;
+  color:#f0e6ef;
   margin: 0;
+}
+
+.mycontent{
+  padding-top: 100px;
+}
+
+.nav-brand{
+  font-family: 'Faster One', cursive;
+  font-size:40px;
+  color:#cc8b79;
+  vertical-align: middle;
+}
+
+.nav-brand:hover{
+  color:#432371;
+  text-decoration: none;
+}
+
+.nav-link{
+  color:#f0e6ef !important;
+  font-size:15px;
+}
+
+.navitem:hover{
+  color:#432371 !important;
+}
+
+.index{
+  text-align:center;
+}
+
+.btn{
+  background-color:#faae7b;
+  color:#f0e6ef;
+  border:none;
+  margin-top:10px;
+  margin-bottom:20px;
+}
+
+.btn:hover{
+  opacity:0.5;
+}
+
+.postdelete{
+  margin-left:50px;
+}
+
+.username, .time{
+  color:#9f6976;
+  padding-left:10px;
+  vertical-align: middle;
+}
+
+.username:hover, .time:hover{
+  text-decoration: none;
+  color:#432371;
+}
+
+.list-group-item-text{
+  opacity:0.5;
+}
+
+.groupuser:hover, .list-group-item:hover{
+  text-decoration: none;
 }
