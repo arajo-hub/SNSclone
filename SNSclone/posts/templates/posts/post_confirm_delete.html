@@ -4,9 +4,11 @@
 <div class="posts">
   {% include 'posts/_post.html' with post=object hide_delete=True %}
 </div>
-<form method="post">
-  {% csrf_token %}
-  <input type="submit" value="Confirm Delete" class='btn btn-md'>
-  <a href="{% url 'posts:single' username=user.username pk=object.pk %}">Cancel</a>
-</form>
+  <form method="post">
+    {% csrf_token %}
+    <div class='container'>
+      <input type="submit" value="Confirm Delete" class='btn btn-md'>
+      <a href="{% url 'posts:single' username=user.username pk=object.pk %}"><input type="submit" value="Cancel" class='btn btn-md'></a>
+    </div>
+  </form>
 {% endblock %}
