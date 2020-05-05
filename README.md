@@ -1,5 +1,7 @@
 # SNS Clone
 파이썬과 장고, 파이썬에 내장된 SQLite3를 이용하여 만든 SNS 클론 프로젝트입니다.
+파이썬애니웨어를 통해 배포했습니다.
+http://arajohub.pythonanywhere.com/
 # 기능
 * 포스트
   * 작성, 삭제
