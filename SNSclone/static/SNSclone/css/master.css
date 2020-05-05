@@ -9,6 +9,10 @@ html, body {
   overflow-y:auto;
 }
 
+html, body::-webkit-scrollbar{
+  background: transparent;
+}
+
 .mycontent{
   padding-top: 100px;
 }
