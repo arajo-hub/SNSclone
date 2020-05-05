@@ -25,7 +25,7 @@ SECRET_KEY = '%e2rapzjl9ffj!_v@k1hvr1k)1s-2cnzl0crvy$^sef1@gut@f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['arajohub.pythonanywhere.com']
 
 
 # Application definition
