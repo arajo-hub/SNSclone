@@ -9,10 +9,6 @@ html, body {
   overflow-y:auto;
 }
 
-html, body::-webkit-scrollbar{
-  background: transparent;
-}
-
 .mycontent{
   padding-top: 100px;
 }
@@ -79,4 +75,8 @@ html, body::-webkit-scrollbar{
 .yourlabs-autocomplete {
     max-height:250px;
     overflow:auto;
+}
+
+.media-body{
+  margin-top:-10px;
 }
