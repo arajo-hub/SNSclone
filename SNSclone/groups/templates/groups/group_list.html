@@ -4,7 +4,8 @@
   {# group list 페이지 중 상세내용영역 #}
   <div class="content">
     {% if user.is_authenticated %}
-    <h2>Welcome Back! <a class='groupuser' href="{% url 'posts:for_user' username=user.username%}">@{{ user.username }}</a></h2>
+    <h2>Welcome Back!<h2>
+    <h2><a class='groupuser' href="{% url 'posts:for_user' username=user.username%}">@{{ user.username }}</a></h2>
     {% endif %}
     <h2>Groups</h2>
     <p>Welcome to the groups page!</p>

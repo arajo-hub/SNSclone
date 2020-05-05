@@ -9,7 +9,7 @@ User=get_user_model() # user모델은 auth에 있는 User를 이용
 class Post(models.Model):
     user=models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE)
     created_at=models.DateTimeField(auto_now=True)
-    message=models.TextField(max_length=384)
+    message=models.TextField(max_length=256)
     message_html=models.TextField(editable=False)
     group=models.ForeignKey(Group, related_name='posts', null=True, blank=True, on_delete=models.CASCADE)
 
