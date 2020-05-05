@@ -13,6 +13,10 @@ html, body::-webkit-scrollbar{
   background: transparent;
 }
 
+body {
+  word-break:break-all;
+}
+
 .mycontent{
   padding-top: 100px;
 }
