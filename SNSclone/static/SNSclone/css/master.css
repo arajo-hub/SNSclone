@@ -6,6 +6,11 @@ html, body {
   background: #714674;
   color:#f0e6ef;
   margin: 0;
+  overflow-y:auto;
+}
+
+html, body::-webkit-scrollbar{
+  background: transparent;
 }
 
 .mycontent{
@@ -56,7 +61,6 @@ html, body {
 .username, .time{
   color:#9f6976;
   padding-left:10px;
-  vertical-align: middle;
 }
 
 .username:hover, .time:hover{
@@ -70,4 +74,9 @@ html, body {
 
 .groupuser:hover, .list-group-item:hover{
   text-decoration: none;
+}
+
+.yourlabs-autocomplete {
+    max-height:250px;
+    overflow:auto;
 }
