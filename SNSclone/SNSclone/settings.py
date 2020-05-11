@@ -25,7 +25,7 @@ SECRET_KEY = '%e2rapzjl9ffj!_v@k1hvr1k)1s-2cnzl0crvy$^sef1@gut@f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['arajohub.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -125,3 +125,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 LOGIN_REDIRECT_URL='home'
 LOGOUT_REDIRECT_URL='thanks'
+
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='joara9566@gmail.com'
+EMAIL_HOST_PASSWORD='********'
+EMAIL_USE_TLS=True
+DEFAULT_FROM_EMAIL=EMAIL_HOST_USER
