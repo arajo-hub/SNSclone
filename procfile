@@ -1,1 +1,1 @@
-web: gunicorn distributiontest.wsgi --log-file -
+web: gunicorn SNSclone.wsgi --log-file -
