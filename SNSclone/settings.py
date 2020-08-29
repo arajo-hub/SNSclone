@@ -25,7 +25,7 @@ SECRET_KEY = '%e2rapzjl9ffj!_v@k1hvr1k)1s-2cnzl0crvy$^sef1@gut@f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['arajohub.pythonanywhere.com']
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 
 # Application definition
@@ -125,3 +125,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 LOGIN_REDIRECT_URL='home'
 LOGOUT_REDIRECT_URL='thanks'
+
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
