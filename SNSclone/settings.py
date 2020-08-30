@@ -23,8 +23,7 @@ TEMPLATE_DIR=os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = '%e2rapzjl9ffj!_v@k1hvr1k)1s-2cnzl0crvy$^sef1@gut@f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com']
 
@@ -79,11 +78,11 @@ WSGI_APPLICATION = 'SNSclone.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#test
     }
 }
 
@@ -127,10 +126,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 LOGIN_REDIRECT_URL='home'
 LOGOUT_REDIRECT_URL='thanks'
-
 
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
