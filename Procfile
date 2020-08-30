@@ -1,1 +1,1 @@
-web: gunicorn SNSclone.wsgi --log-file -
+web: gunicorn SNSclone.wsgi --log-file - --log-level debug
